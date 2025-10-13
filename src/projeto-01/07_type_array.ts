@@ -1,3 +1,21 @@
+// ARRAYS
+// Estrutura de dados que armazena valores do mesmo tipo.
+// Podem ser usados para armazenar dados relacionados (ex: nomes, idades, endereços)
+// Podem ser inicializados com valores pré-definidos ou vazios.
+// Podem ser de qualquer tamanho e modificados após sua criação.
+
+// ELEMENTOS DO ARRAY
+// Podem ser acessados usando os índices (posições) que começam em 0.
+
+// FORMAS DE DECLARAR OS ARRAYS
+// ARRAY DE STRINGS  - string[] ou Array<string>
+// ARRAY DE NUMEROS  - number[] ou Array<number>
+// ARRAY DE BOOLEANS - boolean[] ou Array<boolean>
+// ARRAY DE OBJETOS  - object[] ou Array<object>
+// ARRAY DE FUNÇÕES  - Function[] ou Array<Function>
+// ARRAY DE TIPOS UNION - (string | number | boolean)[] ou Array<(string | number | boolean)>
+
+
 let numeros1: number[];
 numeros1 = [1, 2, 3, 4, 5];
 

@@ -1,3 +1,7 @@
+/// TIPO OBJECT
+// Define que precisa receber um objeto
+// Não se importa com os tipos de dados dentro dele
+
 let novoUsario1: object = {
   nome: 'Romulo',
   email: 'romulo@teste.com',

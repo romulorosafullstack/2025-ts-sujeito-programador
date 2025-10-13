@@ -1,4 +1,9 @@
 "use strict";
+var StatusPermission2;
+(function (StatusPermission2) {
+    StatusPermission2["Admin"] = "ADMIN";
+    StatusPermission2["User"] = "USER";
+})(StatusPermission2 || (StatusPermission2 = {}));
 var DesignColors;
 (function (DesignColors) {
     DesignColors["white"] = "#FFFFFF";

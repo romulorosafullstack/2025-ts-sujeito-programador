@@ -1,3 +1,9 @@
+// TIPO ANY
+// Permite atribuir qualquer tipo de valor a uma variável
+// Pode ser útil quando não se sabe o tipo de dado que a variável vai receber
+// O uso não é recomendado quando se sabe o tipo de dado que a variável vai receber
+// Uma das vantagens do TS é a forte tipagem e no caso o any atua na contra-mão disso.
+
 let precoProduto;
 
 precoProduto = true;
