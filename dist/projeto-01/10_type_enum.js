@@ -1,28 +1,25 @@
 "use strict";
-var StatusPermission2;
-(function (StatusPermission2) {
-    StatusPermission2["Admin"] = "ADMIN";
-    StatusPermission2["User"] = "USER";
-})(StatusPermission2 || (StatusPermission2 = {}));
 var DesignColors;
 (function (DesignColors) {
-    DesignColors["white"] = "#FFFFFF";
-    DesignColors["black"] = "#000000";
+    DesignColors["white"] = "#FFF";
+    DesignColors["black"] = "#000";
 })(DesignColors || (DesignColors = {}));
-console.log('White:', DesignColors.white);
-var StatusPermission1;
-(function (StatusPermission1) {
-    StatusPermission1[StatusPermission1["Admin"] = 0] = "Admin";
-    StatusPermission1[StatusPermission1["User"] = 1] = "User";
-})(StatusPermission1 || (StatusPermission1 = {}));
-console.log('Admin:', StatusPermission1.Admin);
-console.log('User:', StatusPermission1.User);
+console.log(`White: ${DesignColors.white}`);
+var StatusPermission;
+(function (StatusPermission) {
+    StatusPermission[StatusPermission["Admin"] = 0] = "Admin";
+    StatusPermission[StatusPermission["User"] = 1] = "User";
+    StatusPermission[StatusPermission["Support"] = 2] = "Support";
+})(StatusPermission || (StatusPermission = {}));
+console.log('StatusPermission - Admin:', StatusPermission.Admin);
+console.log('StatusPermission - User:', StatusPermission.User);
+console.log('StatusPermission - Support:', StatusPermission.Support);
 var StatusOficina;
 (function (StatusOficina) {
     StatusOficina[StatusOficina["Entrada"] = 1] = "Entrada";
     StatusOficina[StatusOficina["Revisao"] = 2] = "Revisao";
     StatusOficina[StatusOficina["Saida"] = 3] = "Saida";
-    StatusOficina[StatusOficina["Calote"] = 0] = "Calote";
+    StatusOficina["Calote"] = "camisa";
 })(StatusOficina || (StatusOficina = {}));
 console.log('Calote:', StatusOficina.Calote);
 console.log('Saida:', StatusOficina.Saida);
