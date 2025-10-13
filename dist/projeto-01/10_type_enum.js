@@ -19,7 +19,7 @@ var StatusOficina;
     StatusOficina[StatusOficina["Entrada"] = 1] = "Entrada";
     StatusOficina[StatusOficina["Revisao"] = 2] = "Revisao";
     StatusOficina[StatusOficina["Saida"] = 3] = "Saida";
-    StatusOficina["Calote"] = "camisa";
+    StatusOficina[StatusOficina["Calote"] = 0] = "Calote";
 })(StatusOficina || (StatusOficina = {}));
 console.log('Calote:', StatusOficina.Calote);
 console.log('Saida:', StatusOficina.Saida);
