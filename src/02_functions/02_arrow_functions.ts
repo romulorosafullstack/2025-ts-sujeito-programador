@@ -77,7 +77,7 @@ exibirSeparador();
 
 // FUNÇÃO PASSANDO VALOR DEFAULT PARA PARAM
 // Se não passar um valor na chamada da função é atribuido o valor declarado com default
-const cadastroLoja = (nome: string, email?: string, status = false) : boolean {
+const cadastroLoja = (nome: string, email?: string, status = false) : boolean => {
   console.log(`NOME: ${nome} | STATUS: ${status}`);
   return status;
 };
