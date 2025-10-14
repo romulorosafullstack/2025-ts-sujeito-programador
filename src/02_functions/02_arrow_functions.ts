@@ -53,6 +53,8 @@ const cadastroObrigatorio = (nome: string, email: string, senha: string): void =
 
 cadastroObrigatorio("Romulo","romulo@teste.com","12345")
 
+exibirSeparador();
+
 
 // FUNÇÃO COM PARAM(S) OBRIGATÓRIO(S) E OPCIONAIS TIPADO(S)
 // Param(s) obrigatório(s) - (param : tipo) ou (param: tipo1 | tipo2)
@@ -68,3 +70,17 @@ const cadastroOpcionais = (dia: number, mes: number, ano?: number): void => {
 // OBS.: Se não passar todos os valores de params obrigatórios, o TS grifa a chamada da função
 // OBS.: Se passar valores de params com tipos diferentes, o TS grifa o param na chamada da função
 cadastroOpcionais(2, 2);
+
+
+exibirSeparador();
+
+
+// FUNÇÃO PASSANDO VALOR DEFAULT PARA PARAM
+// Se não passar um valor na chamada da função é atribuido o valor declarado com default
+const cadastroLoja = (nome: string, email: string, status = false) : boolean {
+  console.log(`NOME: ${nome} | STATUS: ${status}`);
+  return status;
+};
+
+cadastroLoja("Romulo", "romulo@teste.com")
+cadastroLoja("Guilherme", "guilherme@teste.com", true)

@@ -16,8 +16,16 @@ const cadastroObrigatorio = (nome, email, senha) => {
     console.log(data);
 };
 cadastroObrigatorio("Romulo", "romulo@teste.com", "12345");
+exibirSeparador();
 const cadastroOpcionais = (dia, mes, ano) => {
     let data = { dia, mes, ano };
     console.log(data);
 };
 cadastroOpcionais(2, 2);
+exibirSeparador();
+const cadastroLoja = (nome, email, status = false) => {
+    console.log(`NOME: ${nome} | STATUS: ${status}`);
+    return status;
+};
+cadastroLoja("Romulo", "romulo@teste.com");
+cadastroLoja("Guilherme", "guilherme@teste.com", true);
