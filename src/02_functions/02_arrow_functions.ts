@@ -1,9 +1,9 @@
 const exibirSeparador = (): void => console.log("\n-----------------------------------------\n");
 
 // ARROW FUNCTIONS
-// Chamada também como função anônima, é formato mais usado profissionalmente. Também existe em JS.
-// param - Podemos tipar nenhum, um ou mais de um tipo
-// return - Podemos tipar nenhum (void), um ou mais de um tipo
+// Chamada também como função anônima, é o formato mais usado profissionalmente. Também existe em JS.
+// param - Podemos tipar com nenhum tipo, um ou mais de um
+// return - Podemos tipar com nenhum tipo (void), um ou mais de um
 
 // const - tipo da variavel
 // retornoApi - nume da function
@@ -42,3 +42,29 @@ const ApiString = retornoApiString("https://www.sujeitoprogramador.com.br/");
 console.log(ApiString)
 
 exibirSeparador();
+
+
+// FUNÇÃO COM PARAMS OBRIGATÓRIOS TIPADOS
+// Param obrigat[orio - (param : tipo)
+const cadastroObrigatorio = (nome: string, email: string, senha: string): void => {
+  let data = { nome, email, senha};
+  console.log(data)
+}
+
+cadastroObrigatorio("Romulo","romulo@teste.com","12345")
+
+
+// FUNÇÃO COM PARAM(S) OBRIGATÓRIO(S) E OPCIONAIS TIPADO(S)
+// Param obrigatório - (param : tipo)
+// Param opcional - (param ?: tipo)
+const cadastroOpcionais = (dia: number, mes: number, ano?: number): void => {
+  let data = { dia,  mes, ano };
+  console.log(data)
+}
+
+// AO CHAMAR A FUNÇÃO
+// Sempre passar os valores dos params obrigatorios atendendo a tipagem declarada
+// Se passar os valores dos params opcionais eles precisam atender a tipagem declarada
+// OBS.: Se não passar todos os valores de params obrigatórios, o TS grifa a chamada da função
+// OBS.: Se passar valores de params com tipos diferentes, o TS grifa o param na chamada da função
+cadastroOpcionais(2, 2);

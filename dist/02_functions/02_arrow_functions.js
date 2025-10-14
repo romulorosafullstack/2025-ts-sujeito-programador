@@ -11,3 +11,13 @@ const retornoApiString = (url) => {
 const ApiString = retornoApiString("https://www.sujeitoprogramador.com.br/");
 console.log(ApiString);
 exibirSeparador();
+const cadastroObrigatorio = (nome, email, senha) => {
+    let data = { nome, email, senha };
+    console.log(data);
+};
+cadastroObrigatorio("Romulo", "romulo@teste.com", "12345");
+const cadastroOpcionais = (dia, mes, ano) => {
+    let data = { dia, mes, ano };
+    console.log(data);
+};
+cadastroOpcionais(2, 2);
