@@ -55,8 +55,8 @@ cadastroObrigatorio("Romulo","romulo@teste.com","12345")
 
 
 // FUNÇÃO COM PARAM(S) OBRIGATÓRIO(S) E OPCIONAIS TIPADO(S)
-// Param obrigatório - (param : tipo)
-// Param opcional - (param ?: tipo)
+// Param(s) obrigatório(s) - (param : tipo) ou (param: tipo1 | tipo2)
+// Param(s) opcional - (param ?: tipo) ou (param ?: tipo | tipo2)
 const cadastroOpcionais = (dia: number, mes: number, ano?: number): void => {
   let data = { dia,  mes, ano };
   console.log(data)
