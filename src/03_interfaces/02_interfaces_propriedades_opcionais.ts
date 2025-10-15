@@ -75,14 +75,28 @@ mostrarCadastro({
   status: true
 });
 
-function novoFuncionario({ nome, email, status }: CadastroProps): void {
-  console.log(`NOVO FUNCIONÁRIO: ${nome}\nE-MAIL: ${email}\nSTATUS: ${status}`);
+// FUNÇÃO PASSANDO OBJETO DESCONSTRUIDO
+function novoFuncionario1({ nome, email, status }: CadastroProps): void {
+  console.log(`NOVO FUNCIONÁRIO1: ${nome}\nE-MAIL: ${email}\nSTATUS: ${status}`);
 }
 
-novoFuncionario({
-  nome: "Gabriel",
-  email: "gabriel@souza.com",
+novoFuncionario1({
+  nome: "Renato",
+  email: "renato@nogueira.com",
   status: true
+});
+
+exibirSeparador5();
+
+// FUNÇÃO PASSANDO OBJETO COMO PARAM 
+function novoFuncionario2(propriedades: CadastroProps): void {
+  console.log(`NOVO FUNCIONÁRIO2: ${propriedades.nome}\nE-MAIL: ${propriedades.email}\nSTATUS: ${propriedades.status}`);
+}
+
+novoFuncionario2({
+  nome: "Ricardo",
+  email: "ricardo@gafke.com",
+  status: false
 });
 
 

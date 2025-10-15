@@ -47,11 +47,20 @@ mostrarCadastro({
     nome: "Leandro",
     status: true
 });
-function novoFuncionario({ nome, email, status }) {
-    console.log(`NOVO FUNCIONÁRIO: ${nome}\nE-MAIL: ${email}\nSTATUS: ${status}`);
+function novoFuncionario1({ nome, email, status }) {
+    console.log(`NOVO FUNCIONÁRIO1: ${nome}\nE-MAIL: ${email}\nSTATUS: ${status}`);
 }
-novoFuncionario({
-    nome: "Gabriel",
-    email: "gabriel@souza.com",
+novoFuncionario1({
+    nome: "Renato",
+    email: "renato@nogueira.com",
     status: true
+});
+exibirSeparador5();
+function novoFuncionario2(propriedades) {
+    console.log(`NOVO FUNCIONÁRIO2: ${propriedades.nome}\nE-MAIL: ${propriedades.email}\nSTATUS: ${propriedades.status}`);
+}
+novoFuncionario2({
+    nome: "Ricardo",
+    email: "ricardo@gafke.com",
+    status: false
 });
