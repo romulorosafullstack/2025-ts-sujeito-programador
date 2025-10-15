@@ -1,5 +1,10 @@
+const exibirSeparador3 = (): void => {
+  console.log("----------------------");
+}
+
 // REST OPERATOR
-// Usar quando não sabemos a quantidade de itens que serão passados, porém sabemos o(s) tipo(s) dos valores
+// Usar quando não souber a quantidade de itens que serão passados,
+// porém se sabe o(s) tipo(s) dos valores
 
 // DECLARAR A FUNÇÃO
 // const - tipo de escopo da variavel
@@ -26,7 +31,10 @@ const mostrarNomes = (...nomes: string[]): void => {
 mostrarNomes("Romulo", "Leonardo", "Flavio", "Leandro")
 
 
-// Náo sei a quantidade e valor de vendas que vão ser passadas, mas sei que pra elas vou usar um array de numeros
+exibirSeparador3();
+
+// Náo sei a quantidade e valor de vendas que vão ser passadas, 
+// mas sei que pra elas vou usar um array de numeros
 function vendasBalanco (...vendas : number[]): void{
   // Quando entrarem quero saber a qantidade de vendas
   const vendasQuantidade = vendas.length;

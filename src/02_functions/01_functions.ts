@@ -1,6 +1,10 @@
-//FUCTIONS
+const exibirSeparador1 = (): void => {
+  console.log("\n---------------------------\n");
+}
 
-// FUNCTION COM PARAM E RETUN COM TIPOS DEFINIDOS
+//FUNCTIONS
+
+// 1) COM PARAM E RETUN COM TIPOS DEFINIDOS
 // function login - Declaro uma function e seu nome e
 // (username:string) - Defino um parametro tipado a ser passado (no caso usaername do tipo string)
 // : boolean - Defino que um return tipado (no caso um boolean)
@@ -18,11 +22,10 @@ console.log(login1("romulorosa11"));
 const retornoLogin1 = login1("romulorosa12");
 console.log(retornoLogin1);
 
-console.log("\n----------------------\n")
+exibirSeparador1();
 
 
-
-//FUNÇÃO COM PARAM COM MAIS DE UM TIPO
+// 2) COM PARAM DE MAIS DE UM TIPO
 // function login - Declaro uma function e seu nome e
 // (username:string | number) - Defino um parametro tipado a ser passado (no caso username precisa ser tipo string OU number)
 // : boolean - Defino que um return tipado (no caso um boolean)
@@ -40,15 +43,14 @@ console.log(login2(40));
 const retornoLogin2 = login1("romulorosa2");
 console.log(retornoLogin2);
 
-console.log("\n----------------------\n")
+exibirSeparador1();
 
 
-
-// FUNÇÕES COM RETURN DE MAIS DE UM TIPO
+// COM RETURN DE MAIS DE UM TIPO
 // function login - Declaro uma function e seu nome e
-// (username:string) - Defino um parametro tipado a ser passado (no caso username precisa ser tipo string)
-// : boolean | string- Defino o return tipado (no caso boolean ou string)
-// Qualquer return de outros tipos acusa erro
+// (username:string) - Defino um parametro tipado a ser passado (no caso username é do tipo string)
+// : boolean | string - Defino o return tipado (no caso boolean OU string)
+// OBS: Se tentar um return de outro tipo, o TS grifa sinalizando o erro
 function login3(username: string): boolean | string{
   let message = `Bem-vindo ${username}!`;
   console.log(message)
@@ -63,14 +65,14 @@ console.log(login3("romulorosa3"));
 const retornoLogin3 = login1("romulorosa3");
 console.log(retornoLogin3);
 
-console.log("\n----------------------\n")
+exibirSeparador1();
 
 
-
-// FUNCION SEM RETURN
-// function login - Declaro uma function e seu nome e
+// void - SEM RETURN
+// function - Declaro uma function
+// login - Declaro seu nome
 // (username:string) - Defino um parametro tipado a ser passado (no caso username do tipo string)
-// : void - Defino que a funnction não tem return
+// :void - Defino que essa function não tem return
 // Obs: Se tento usar return o TS sinaliza erro
 function login4(username: string): void{
   let message = `Oi ${username}!`;

@@ -1,3 +1,7 @@
+const exibirSeparador2 = (): void => {
+  console.log("\n---------------------------\n");
+}
+
 // ARROW FUNCTIONS
 // Chamada também como função anônima, é o formato mais usado profissionalmente. Também existe em JS.
 // param - Podemos tipar com nenhum tipo, um ou mais de um
@@ -22,7 +26,7 @@ const retornoApiVoid = (url:string): void => {
 
 retornoApiVoid("https://www.smartts.com.br/");
 
-
+exibirSeparador2()
 
 
 // FUNÇÃO ANÔNIMA COM PARAM(S) E RETURN TIPADO(S)
@@ -39,7 +43,7 @@ const retornoApiString = (url:string): string => {
 const ApiString = retornoApiString("https://www.sujeitoprogramador.com.br/");
 console.log(ApiString)
 
-
+exibirSeparador2();
 
 
 // FUNÇÃO COM PARAMS OBRIGATÓRIOS TIPADOS
@@ -51,7 +55,7 @@ const cadastroObrigatorio = (nome: string, email: string, senha: string): void =
 
 cadastroObrigatorio("Romulo","romulo@teste.com","12345")
 
-
+exibirSeparador2();
 
 
 // FUNÇÃO COM PARAM(S) OBRIGATÓRIO(S) E OPCIONAIS TIPADO(S)
@@ -70,7 +74,7 @@ const cadastroOpcionais = (dia: number, mes: number, ano?: number): void => {
 cadastroOpcionais(2, 2);
 
 
-
+exibirSeparador2();
 
 
 // FUNÇÃO PASSANDO VALOR DEFAULT PARA PARAM

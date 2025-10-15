@@ -1,4 +1,7 @@
 "use strict";
+const exibirSeparador3 = () => {
+    console.log("----------------------");
+};
 const mostrarNomes = (...nomes) => {
     console.log("QUANTIDADE DE NOMES:", nomes.length);
     nomes.map(nome => {
@@ -6,6 +9,7 @@ const mostrarNomes = (...nomes) => {
     });
 };
 mostrarNomes("Romulo", "Leonardo", "Flavio", "Leandro");
+exibirSeparador3();
 function vendasBalanco(...vendas) {
     const vendasQuantidade = vendas.length;
     let vendasSoma = 0;
