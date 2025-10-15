@@ -1,0 +1,17 @@
+"use strict";
+let inteiro1 = 10;
+console.log(`number1: ${inteiro1}`);
+let inteiro2;
+inteiro2 = 20;
+console.log(`number2: ${inteiro2}`);
+let real1 = 30.5;
+console.log(`number3: ${real1}`);
+let real2;
+real2 = 40.5;
+console.log(`number4: ${real2}`);
+let sum1 = inteiro1 + inteiro2;
+console.log(`sum1: ${sum1}`);
+let sum2 = real1 + real2;
+console.log(`sum2: ${sum2}`);
+let sum3 = inteiro1 + real1;
+console.log(`sum3: ${sum3}`);
