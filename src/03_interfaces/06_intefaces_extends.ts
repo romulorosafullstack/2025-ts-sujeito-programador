@@ -1,3 +1,4 @@
+// Crio uma interface  
 interface JogoProps{
   readonly id: string;
   nome: string;
@@ -5,6 +6,7 @@ interface JogoProps{
   plataforma: string[];
 }
 
+//Instancio um objeto do tipo JogoProps e atribuo valores aos seus atributos
 const left4dead: JogoProps = {
   id: "001",
   nome: "Left 4 Dead",
@@ -12,12 +14,16 @@ const left4dead: JogoProps = {
   plataforma: ["PC", "PS5"]
 }
 
+//Exibo os dados do objeto left4dead
 console.log(left4dead)
 
+
+//
 interface DLC extends JogoProps{
   novoConteudo: string[];
 }
 
+// Instancio um objeto do tipo DLC e atribuo valores aos seus atributos
 const left4deadDLC: DLC = {
   id: "002",
   nome: "Left 4 Dead - Redemption",
