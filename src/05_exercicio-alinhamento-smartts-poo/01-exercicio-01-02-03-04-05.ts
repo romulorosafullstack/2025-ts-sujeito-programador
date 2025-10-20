@@ -21,8 +21,9 @@ class PessoaPoo {
 // 3) Crie uma classe Funcionario que herda de Pessoa e adiciona cargo e salario.
 class FuncionarioPoo extends PessoaPoo {
   // Declarei as propriedades e seus tipos
-  cargo: string;
-  salario: number;
+  public cargo: string;
+  // 5) Faça com que o salario seja privado
+  private salario: number;
 
   // Declarei o construtor da classe Funcionario passando params e seus tipos da classe PessoaPoo adicionando os params e tipos da classe Funcionario (precisa ser nessa ordem quando há herança)
   constructor(nome: string, idade: number, cargo: string, salario: number) {
@@ -46,7 +47,7 @@ class FuncionarioPoo extends PessoaPoo {
 const funcionario_01 = new FuncionarioPoo("Leandro", 38, "Tech Lead", 200000);
 const funcionario_02 = new FuncionarioPoo("Flavio", 35, "Dev Back-End Senior", 15000);
 const funcionario_03 = new FuncionarioPoo("Leonardo", 22, "Dev Front-End Pleno", 10000);
-const funcionario_04 = new FuncionarioPoo("Romulo", 40, "Dev Front-End Jr", 4000);
+const funcionario_04 = new FuncionarioPoo("Romulo", 40, "Dev Front-End Junior", 4000);
 
 //Chamei os métodos de falar() e trabalhar() de cada objeto
 funcionario_01.falar();
@@ -59,5 +60,11 @@ funcionario_03.falar();
 funcionario_03.trabalhar();
 
 funcionario_04.falar();
-funcionario_04.trabalhar();
+funcionario_04.trabalhar()
+
+
+funcionario_04.cargo = "Dev Front-End Pleno";
+
+// Salário é private e não pode ser alterado diretamente
+funcionario_04.salario = 12000;
 
