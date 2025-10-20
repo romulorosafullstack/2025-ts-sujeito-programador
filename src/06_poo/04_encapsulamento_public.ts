@@ -5,11 +5,16 @@
 // - O encapsulamento ajuda a manter a integridade dos dados e a evitar o uso de dados indesejados.
 
 // - 5 MODIFICADORES/TIPOS DE ENCAPSULAMENTO:
-// - public: Sendo Default, não precisa ser declarado. Pode ser acessado e modificaddo de qualquer lugar do código, pois todos tem acesso.
-// - private: Pode ser acessado e modificado apenas dentro da própria classe na qual foi criado.
-// - protected: Pode ser acessado e modificado dentro da própria classe e classes filhas.
-// - protected (readonly): Pode ser acessado dentro da própria classe e classes filhas, mas não pode ser modificado.
-// - internal: Pode ser acessado dentro do mesmo assembly (projeto).
+// - public: Atributos e/ou métodos podem ser acessados e modificados de qualquer lugar do código, pois todos tem acesso. Sendo Default, não precisa ser declarado.
+// - private: Atributos e/ou métodos podem ser acessados e modificados apenas dentro da própria classe na qual foi criado.
+// - protected: Atributos e/ou métodos podem ser acessados e modificados dentro da própria classe e classes filhas.
+// - protected (readonly): Atributos e/ou métodos podem ser acessados e modificados dentro da própria classe e classes filhas, mas não podem ser modificado.
+// - internal: Atributos e/ou métodos podem ser acessados e modificados dentro do mesmo assembly (projeto).
+
+
+// ENCAPSULAMENTO PUBLIC
+// - Atributos e/ou métodos podem ser acessados e modificados de qualquer lugar do código, pois todos tem livre acesso. 
+// - Sendo Default, não precisa ser declarado.
 
 //Declaro uma classe pai
 class UsuarioPublic{
