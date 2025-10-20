@@ -1,33 +1,42 @@
 "use strict";
 class Conta {
     titular;
-    saldo;
-    constructor(titular, saldoInicial) {
-        this.titular = titular;
-        this.saldo = saldoInicial;
-    }
-}
-class ContaCorrente extends Conta {
     cpf;
-    constructor(titular, saldoInicial, cpf) {
-        super(titular, saldoInicial);
+    saldo;
+    constructor(titular, cpf, saldoInicial) {
+        this.titular = titular;
         this.cpf = cpf;
+        this.saldo = saldoInicial;
     }
     depositar(valor) {
         this.saldo += valor;
-        console.log(`Depositado ${valor} reais na conta de ${this.titular}`);
+        console.log(`DEPÓSITO: R$ ${valor.toFixed(2)}`);
     }
     sacar(valor) {
         console.log(`TITULAR: ${this.titular}`);
         if (this.saldo >= valor) {
             this.saldo -= valor;
-            console.log(`SAQUE AUTORIZADO.\nVALOR: R$ ${valor}`);
+            console.log(`SAQUE AUTORIZADO.\nVALOR: R$ ${valor.toFixed(2)}`);
         }
         else {
-            console.log(`SALDO INSUFICIENTE`);
+            console.log(`🚫 SAQUE NÃO FOI AUTORIZADO.\nSALDO INSUFICIENTE.`);
         }
     }
     verSaldo() {
         console.log(`SALDO ATUAL DA CONTA: R$ ${this.saldo}`);
+    }
+}
+class ContaCorrente extends Conta {
+    numeroContaCorrente;
+    constructor(titular, cpf, saldoInicial, numeroContaCorrente) {
+        super(titular, cpf, saldoInicial);
+        this.numeroContaCorrente = numeroContaCorrente;
+    }
+}
+class ContaPoupanca extends Conta {
+    numeroContaPoupanca;
+    constructor(titular, cpf, saldoInicial, numeroContaPoupanca) {
+        super(titular, cpf, saldoInicial);
+        this.numeroContaPoupanca = numeroContaPoupanca;
     }
 }

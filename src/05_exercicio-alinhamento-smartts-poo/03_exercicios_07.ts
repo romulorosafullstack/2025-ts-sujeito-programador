@@ -1,22 +1,13 @@
 class Conta{
   titular: string;
+  cpf: string;
   saldo: number;
 
   // Cria um construtor para inicializar as propriedades
-  constructor(titular: string, saldoInicial: number){
+  constructor(titular: string, cpf: string, saldoInicial: number){
     this.titular = titular;
-    this.saldo = saldoInicial;
-  }
-}
-
-class ContaCorrente extends Conta {
-  cpf: string;
-
-  // Crio o construtor da subclasse (ContaCorrente) passando os primeiro os params da clase pai/superclasse e depois da classe filha/subclasse
-  constructor(titular: string, saldoInicial: number, cpf: string) {
-    // Chamo o construtor da superclasse (Conta) passando os params
-    super(titular, saldoInicial);
     this.cpf = cpf;
+    this.saldo = saldoInicial;
   }
 
   // Adicionei método para depositar
@@ -26,7 +17,7 @@ class ContaCorrente extends Conta {
     // Incremento o saldo com o valor do deposito
     this.saldo += valor;
     //Exibo o saldo atual
-    console.log(`Depositado ${valor} reais na conta de ${this.titular}`);
+    console.log(`DEPÓSITO: R$ ${valor.toFixed(2)}`);
   }
   
   // Adicionei método para sacar
@@ -39,10 +30,10 @@ class ContaCorrente extends Conta {
       // Decremento o valor do saque do saldo atual
       this.saldo -= valor;
       // Exibo uma mensagem confirmando o saque
-      console.log(`SAQUE AUTORIZADO.\nVALOR: R$ ${valor}`);
+      console.log(`SAQUE AUTORIZADO.\nVALOR: R$ ${valor.toFixed(2)}`);
     } else {
       // Exibo uma mensagem negando o saque por saldo insuficiente
-      console.log(`SALDO INSUFICIENTE`);
+      console.log(`🚫 SAQUE NÃO FOI AUTORIZADO.\nSALDO INSUFICIENTE.`);
     }
   }
 
@@ -50,5 +41,27 @@ class ContaCorrente extends Conta {
   // Uso void pois a função não tem return, pois só usa um console.log
   verSaldo(): void {
     console.log(`SALDO ATUAL DA CONTA: R$ ${this.saldo}`);
+  }
+}
+
+// Crio a subclasse (ContaCorrente) que herda da classe Conta
+class ContaCorrente extends Conta {
+  numeroContaCorrente: string;
+  // Crio o construtor da subclasse (ContaCorrente) passando os primeiro os params da clase pai/superclasse e depois da classe filha/subclasse
+  constructor(titular: string, cpf: string, saldoInicial: number, numeroContaCorrente: string) {
+    // Chamo o construtor da superclasse (Conta) passando os params
+    super(titular, cpf, saldoInicial);
+    this.numeroContaCorrente = numeroContaCorrente;
+  }
+}
+
+// Crio a subclasse (ContaPoupança) que herda da classe Conta
+class ContaPoupanca extends Conta {
+  numeroContaPoupanca: string;
+  // Crio o construtor da subclasse (ContaCorrente) passando os primeiro os params da clase pai/superclasse e depois da classe filha/subclasse
+  constructor(titular: string, cpf: string, saldoInicial: number, numeroContaPoupanca: string) {
+    // Chamo o construtor da superclasse (Conta) passando os params
+    super(titular, cpf, saldoInicial);
+    this.numeroContaPoupanca = numeroContaPoupanca;
   }
 }
