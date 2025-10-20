@@ -10,7 +10,7 @@ class ContaPrivate {
             console.log('Aumento de limite não permitido');
         }
     }
-    solicitarLimite(estaAutenticado, quantidade) {
+    solicitarLimiteApp(estaAutenticado, quantidade) {
         if (estaAutenticado) {
             this.aumentarLimite(quantidade);
         }
@@ -18,7 +18,17 @@ class ContaPrivate {
             return false;
         }
     }
+    solicitarLimite(quantidade) {
+        return this.aumentarLimite(quantidade);
+    }
 }
 const correntista01 = new ContaPrivate();
-correntista01.solicitarLimite(true, 500);
+correntista01.solicitarLimiteApp(true, 500);
 console.log(correntista01);
+class BancoAfiliado extends ContaPrivate {
+    limiteConta() {
+        return this.solicitarLimite(900);
+    }
+}
+const correntista02 = new BancoAfiliado();
+console.log(correntista02);
