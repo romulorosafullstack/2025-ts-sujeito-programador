@@ -11,7 +11,7 @@ class Loja1 {
   nome: string;
   categoria: string;
 
-  // MÉTODO CONSTRUTOR - É chamado quando um objeto que passa valores aos seus atributos
+  // MÉTODO CONSTRUTOR - É chamado quando um objeto passa valores aos seus atributos
   constructor(nome: string, categoria: string) {
     this.nome = nome;
     this.categoria = categoria;
@@ -51,8 +51,3 @@ console.log(retornoLoja);
 // Chamo o método alterarStatus() do objeto loja1a
 // Como uso type alias para definir o novoStatus, só posso usar como valor "ativo" ou "inativo"
 loja1a.alterarStatus("inativo");
-
-
-
-
-
