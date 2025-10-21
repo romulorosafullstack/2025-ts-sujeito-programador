@@ -12,7 +12,7 @@ class PessoaPoo {
     this.idade = idade;
   }
 
-  // 2) Adicione um método falar() que imprime uma mensagem com o nome. Usei um void porquwe não preciso retornar nada
+  // 2) Adicionei um método falar() que imprime uma mensagem com o nome. Usei um void porquwe não preciso retornar nada
   falar(): void {
     console.log(`Olá, meu nome é ${this.nome}`);
   }
@@ -21,11 +21,12 @@ class PessoaPoo {
 // 3) Crie uma classe Funcionario que herda de Pessoa e adiciona cargo e salario.
 class FuncionarioPoo extends PessoaPoo {
   // Declarei as propriedades e seus tipos
-  public cargo: string;
-  // 5) Faça com que o salario seja privado
+  cargo: string;
+  // 5) Declarei salario como privado
   private salario: number;
 
-  // Declarei o construtor da classe Funcionario passando params e seus tipos da classe PessoaPoo adicionando os params e tipos da classe Funcionario (precisa ser nessa ordem quando há herança)
+  // Declarei o construtor da classe Funcionario passando params e seus tipos da classe pai PessoaPoo
+  // depois adicionando os params e tipos da classe filha Funcionario (precisa ser nessa ordem quando há herança)
   constructor(nome: string, idade: number, cargo: string, salario: number) {
 
     // Chamei o construtor da classe PessoaPoo passando os params
@@ -36,18 +37,31 @@ class FuncionarioPoo extends PessoaPoo {
     this.salario = salario;
   }
 
-  //4) Adicione um método trabalhar().
+  //6) Declarei Getters e Setters
+  get getSalario(): number {
+    return this.salario;
+  }
+
+  set setSalario(salario: number) {
+    if (salario > 0) {
+      this.salario = salario;
+    } else {
+      console.log("Salário inválido");
+      console.log("---------------------------");
+    }
+  }
+
+//4) Adicione um método trabalhar().
   trabalhar(): void {
-    console.log(`Trabalho como ${this.cargo} com salário de ${this.salario}`)
-    console.log("---------------------------");;
+    console.log(`Posição: ${this.cargo} com salário de R$ ${this.salario.toFixed(2).replace(".", ",")}`);
   }
 }
 
 //Instanciei objetos da classe Funcionario
 const funcionario_01 = new FuncionarioPoo("Leandro", 38, "Tech Lead", 200000);
-const funcionario_02 = new FuncionarioPoo("Flavio", 35, "Dev Back-End Senior", 15000);
-const funcionario_03 = new FuncionarioPoo("Leonardo", 22, "Dev Front-End Pleno", 10000);
-const funcionario_04 = new FuncionarioPoo("Romulo", 40, "Dev Front-End Junior", 4000);
+const funcionario_02 = new FuncionarioPoo("Flavio", 35, "Dev Back-End Senior 1", 15000);
+const funcionario_03 = new FuncionarioPoo("Leonardo", 22, "Dev Front-End Pleno 3", 10000);
+const funcionario_04 = new FuncionarioPoo("Romulo", 40, "Dev Front-End Junior 1", 4000);
 
 //Chamei os métodos de falar() e trabalhar() de cada objeto
 funcionario_01.falar();
@@ -60,11 +74,8 @@ funcionario_03.falar();
 funcionario_03.trabalhar();
 
 funcionario_04.falar();
-funcionario_04.trabalhar()
+funcionario_04.trabalhar();
 
-
-funcionario_04.cargo = "Dev Front-End Pleno";
-
-// Salário é private e não pode ser alterado diretamente
-funcionario_04.salario = 12000;
-
+funcionario_04.cargo = "Dev Front-End Junior 2";
+funcionario_04.setSalario = 5000;
+funcionario_04.trabalhar();
