@@ -14,7 +14,7 @@ class PessoaPoo {
 
   // 2) Adicionei um método falar() que imprime uma mensagem com o nome. Usei um void porquwe não preciso retornar nada
   falar(): void {
-    console.log(`Olá, meu nome é ${this.nome}`);
+    console.log(`\nOlá, meu nome é ${this.nome}`);
   }
 }
 
@@ -38,13 +38,13 @@ class FuncionarioPoo extends PessoaPoo {
   }
 
   //6) Declarei Getters e Setters
-  get getSalario(): number {
-    return this.salario;
+  get getSalario(): string {
+    return `${this.salario.toFixed(2).replace(".", ",")}`;
   }
 
-  set setSalario(salario: number) {
-    if (salario > 0) {
-      this.salario = salario;
+  set setSalario(novoSalario: number) {
+    if (novoSalario > 0) {
+      this.salario = novoSalario;
     } else {
       console.log("Salário inválido");
       console.log("---------------------------");
@@ -53,7 +53,7 @@ class FuncionarioPoo extends PessoaPoo {
 
 //4) Adicione um método trabalhar().
   trabalhar(): void {
-    console.log(`Posição: ${this.cargo} com salário de R$ ${this.salario.toFixed(2).replace(".", ",")}`);
+    console.log(`Cargo: ${this.cargo}\nSalário: R$ ${this.getSalario}`);
   }
 }
 
@@ -75,7 +75,9 @@ funcionario_03.trabalhar();
 
 funcionario_04.falar();
 funcionario_04.trabalhar();
+//console.log(funcionario_04.getSalario);
 
 funcionario_04.cargo = "Dev Front-End Junior 2";
 funcionario_04.setSalario = 5000;
 funcionario_04.trabalhar();
+//console.log(funcionario_04.getSalario);

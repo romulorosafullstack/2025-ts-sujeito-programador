@@ -7,7 +7,7 @@ class PessoaPoo {
         this.idade = idade;
     }
     falar() {
-        console.log(`Olá, meu nome é ${this.nome}`);
+        console.log(`\nOlá, meu nome é ${this.nome}`);
     }
 }
 class FuncionarioPoo extends PessoaPoo {
@@ -19,11 +19,11 @@ class FuncionarioPoo extends PessoaPoo {
         this.salario = salario;
     }
     get getSalario() {
-        return this.salario;
+        return `${this.salario.toFixed(2).replace(".", ",")}`;
     }
-    set setSalario(salario) {
-        if (salario > 0) {
-            this.salario = salario;
+    set setSalario(novoSalario) {
+        if (novoSalario > 0) {
+            this.salario = novoSalario;
         }
         else {
             console.log("Salário inválido");
@@ -31,7 +31,7 @@ class FuncionarioPoo extends PessoaPoo {
         }
     }
     trabalhar() {
-        console.log(`Posição: ${this.cargo} com salário de R$ ${this.salario.toFixed(2).replace(".", ",")}`);
+        console.log(`Cargo: ${this.cargo}\nSalário: R$ ${this.getSalario}`);
     }
 }
 const funcionario_01 = new FuncionarioPoo("Leandro", 38, "Tech Lead", 200000);
